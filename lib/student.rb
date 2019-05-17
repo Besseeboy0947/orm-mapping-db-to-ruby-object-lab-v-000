@@ -110,7 +110,7 @@ end
     DB[:conn].execute(sql, x)
   end
   def self.first_x_students_in_grade_10(x)
-    sql = "SELECT * FROM students WHERE grade = ?"
+    sql = "SELECT * FROM students WHERE grade = 10 LIMIT ?"
     DB[:conn].execute(sql, x)
   end
   
