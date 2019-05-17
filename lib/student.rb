@@ -25,6 +25,14 @@ class Student
       self.new_from_db(row)
   end.first
 end
+ def self.all
+    SELECT * 
+    FROM students 
+    SQL
+    DB[:conn].execute(sql).collect do |row|
+      self.new_from_db(row)
+    end
+  end	  end
 
   
   def save
